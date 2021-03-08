@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Krub&display=swap');
+
+        * {
+            font-family: 'Krub', sans-serif;
+        }
+        .bg1{
+            background-color: #341f48;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236441a5'/%3E%3Cstop offset='1' stop-color='%23341f48'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%232a0845' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%232a0845' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        } 
+        .bg3{
+            background-color: #ebebeb;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='500 0 1600 900'%3E%3Cpolygon fill='%239028cc' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23711a50' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%239c38c0' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23762461' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23a447b6' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%237a2e72' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23a956ad' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%237b3984' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ab65a6' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%237a4597' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa73a0' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%237551a9' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-main >
+                <template>
+                    <v-card flat >
+                        <v-toolbar color="" class="bg1" dark extended flat tile>
+                            <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+                        </v-toolbar>
+                        <v-navigation-drawer v-model="drawer" fixed temporary>
+                            <v-sheet color="grey lighten-4" class="pa-4">
+                                <v-avatar class="mb-4" color="grey darken-1" size="64"></v-avatar>
+
+                                <div>john@vuetifyjs.com</div>
+                            </v-sheet>
+                            <v-list>
+                                <v-list-item link>
+                                    <v-list-item-icon>
+                                        <v-icon>mdi-home</v-icon>
+                                    </v-list-item-icon>
+
+                                    <v-list-item-content>
+                                        <v-list-item-title><a href="/index.html">หน้าแรก</a></v-list-item-title>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </v-list>
+                        </v-navigation-drawer>
+
+                        <!-- <v-card class="mx-auto" max-width="700" style="margin-top:-64px;">
+                            <v-toolbar flat>
+                                <v-toolbar-title class="font-bold">
+                                    แบบทดสอบก่อนเรียน
+                                </v-toolbar-title>
+
+                            </v-toolbar>
+
+                            <template>
+                                <v-container class="grey lighten-5">
+                                    <v-row no-gutters>
+                                        <template>
+                                            <v-col>
+                                                <v-card class="pa-2" outlined tile>
+                                                    Column1
+                                                </v-card>
+                                            </v-col>
+                                        </template>
+                                    </v-row>
+                                </v-container>
+                            </template>
+                        </v-card> -->
+                        <v-main class="bg3" style="margin-top:-64px;">
+                            <v-container>
+                                <v-row>
+                                    <v-col cols="12" sm="4">
+                                        <v-sheet rounded="lg" min-height="268">
+                                            <v-alert dense type="warning" class="p-4" color="" icon="mdi-school">
+                                                <strong class="text-xl">แบบทดสอบก่อนเรียน</strong>
+                                            </v-alert>
+                                            <p class="pl-4 pt-3">ชื่อ : Lorem Lorem</p>
+                                            <p class="pl-4">รหัสนิสิต : Lorem</p>
+                                            <p class="pl-4">สาขา : Lorem</p>
+                                            <p class="pl-4">คณะ : Lorem</p>
+                                            <v-divider></v-divider>
+                                            <p class="pl-4 pt-3">ข้อสอบทั้งหมด : 20 ข้อ</p>
+                                            <p class="pl-4">ทำข้อสอบแล้ว : 10 / 20 ข้อ</p>
+                                            <p class="pl-4 pb-3">ยังไม่ได้ทำ : 10 / 20 ข้อ</p>
+                                        </v-sheet>
+
+
+                                    </v-col>
+
+                                    <v-col cols="12" sm="8">
+                                        <v-sheet min-height="70vh" rounded="lg">
+                                            <p class="pl-4 pt-3 font-bold">ข้อสอบทั้งหมด : 20 ข้อ</p>
+                                            <v-divider></v-divider>
+                                            <p class="p-2 pt-6">ข้อที่ 1 : Lorem Ipsum is simply dummy text of the
+                                                printing and typesetting industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                1500s,
+                                                when an unknown printer took a galley of type and scrambled it to make a
+                                                type specimen book.
+                                                It has survived not only five centuries : </p>
+                                            <v-radio-group v-model="column" column>
+                                                <v-radio class="p-2" label="Option 1" value="radio-1"></v-radio>
+                                                <v-radio class="p-2" label="Option 2" value="radio-2"></v-radio>
+                                                <v-radio class="p-2" label="Option 3" value="radio-3"></v-radio>
+                                                <v-radio class="p-2" label="Option 4" value="radio-4"></v-radio>
+                                            </v-radio-group>
+
+                                            <v-divider></v-divider>
+                                            <p class="p-2 pt-6">ข้อที่ 2 : Lorem Ipsum is simply dummy text of the
+                                                printing and typesetting industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                1500s,
+                                                when an unknown printer took a galley of type and scrambled it to make a
+                                                type specimen book.
+                                                It has survived not only five centuries : </p>
+                                            <v-radio-group v-model="column1" column>
+                                                <v-radio class="p-2" label="Option 1" value="radio-1"></v-radio>
+                                                <v-radio class="p-2" label="Option 2" value="radio-2"></v-radio>
+                                                <v-radio class="p-2" label="Option 3" value="radio-3"></v-radio>
+                                                <v-radio class="p-2" label="Option 4" value="radio-4"></v-radio>
+                                            </v-radio-group>
+
+                                            <v-card-text>
+                                                <v-row align="center" justify="center" class="pt-4 pb-4">
+                                                    <v-btn-toggle v-model="toggle_exclusive" rounded>
+                                                        <v-btn>
+                                                            <v-icon>mdi-arrow-left</v-icon><sapn class="font-bold">กลับ</sapn>
+                                                        </v-btn> 
+                                                        <v-btn>
+                                                            <sapn class="font-bold"><a href="/video.html">ต่อไป</a></sapn><v-icon>mdi-arrow-right</v-icon>
+                                                        </v-btn>
+                                                    </v-btn-toggle>
+                                                </v-row>
+                                            </v-card-text>
+                                        </v-sheet>
+                                    </v-col>
+
+
+                                </v-row>
+                            </v-container>
+                        </v-main>
+                    </v-card>
+                </template>
+
+            </v-main>
+
+            <template>
+                <v-footer dark padless>
+                    <v-card flat tile class="bg1 white--text text-center">
+                        <v-card-text>
+                            <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
+                                <v-icon size="24px">
+                                    {{ icon }}
+                                </v-icon>
+                            </v-btn>
+                        </v-card-text>
+
+                        <v-card-text class="white--text pt-0">
+                            Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo
+                            interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed
+                            massa consectetur dignissim a sit amet dui. 
+                        </v-card-text>
+
+                        <v-divider></v-divider>
+
+                        <v-card-text class="white--text">
+                            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+                        </v-card-text>
+                    </v-card>
+                </v-footer>
+            </template>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: () => {
+                return ({
+                    drawer: null,
+                    column: null,
+                    column1: null,
+                    icons: [
+                        'mdi-facebook',
+                        'mdi-twitter',
+                        'mdi-linkedin',
+                        'mdi-instagram',
+                    ],
+                })
+            },
+            async created() {
+
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
